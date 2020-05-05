@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block title %}
+    Bookmark Add
+    {% endblock %}
+{% block content %}
+<form action="" method="post"> <!--action에 지정된 것을 post로 넘길, 페이지를 지정하는데, 아무것도 지정하지 않으면 현재페이지-->
+    {%  csrf_token %} <!--해킹을 막기 위해 사용, form태그를 사용했을 경우 반드시 사용-->
+    {{ form.as_p }} <!--여기의 form을 p태그 형태로 나타내라->Site name, Site URL이 p태그로 만들어져있음-->
+    <input type="submit" value="Add" class="btn btn-info btn-sm">
+</form>
+{% endblock %}
+</body>
+</html>

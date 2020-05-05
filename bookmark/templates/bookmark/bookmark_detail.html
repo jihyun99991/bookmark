@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block title %}Detail{% endblock %}
+{% block content %}
+{{ object.site_name }}<br/>  <!--bookmark에서 사이트 이름을 눌렀을때 이동하는 사이트에 표시되는 내용들-->
+{{ object.url }}
+{% endblock %}
+</body>
+</html>
